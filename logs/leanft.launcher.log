@@ -1,0 +1,322 @@
+[2022-02-07 06:26:10.785] [TRACE] ConsoleLogger - LeanFtLauncher.c'tor : options: null - taken from argv&env
+[2022-02-07 06:26:10.787] [TRACE] ConsoleLogger - LeanFtLauncher.c'tor : create settingsHelper since we didn't get it from caller
+[2022-02-07 06:26:10.787] [INFO] SettingsHelper - load : going to load settings
+[2022-02-07 06:26:10.788] [DEBUG] SettingsHelper - upgradeUserSettingsLocation : new userConfigFile:  /root/.leanft/config/config.json  already exists; not attempting moving.
+[2022-02-07 06:26:10.788] [INFO] SettingsHelper - load : loading userConfig file:  /root/.leanft/config/config.json
+[2022-02-07 06:26:10.789] [INFO] SettingsHelper - load : loaded settings from user config file:  { usageTracking: 'false' }
+[2022-02-07 06:26:10.791] [INFO] SettingsHelper - load : loading globalConfig file:  /opt/uftdeveloper/lwe/lightweight-engine/config/config.json
+[2022-02-07 06:26:10.791] [INFO] SettingsHelper - load : loaded settings from global config file:  {
+  version: 2,
+  port: 5095,
+  packages: {
+    Web: { isEnabled: true },
+    Mobile: { isEnabled: true },
+    SAPUI5: { isEnabled: false }
+  },
+  idle_shutdown_enabled: true,
+  idle_shutdown_timeout: 240,
+  identification_timeout: 20,
+  proxyInfo: {
+    proxyAddress: null,
+    useAuthentication: false,
+    userName: 'user',
+    encryptedPassword: '0SWoxfcgI8AwDTlJKrk8aA=='
+  },
+  labs: {
+    mobileCenter: { serverInfo: [Object], showVncDuringReplay: false },
+    srf: { serverInfo: [Object], showVncDuringReplay: false }
+  },
+  capabilities: {},
+  maxLicensesAllowed: 1,
+  usageTracking: false
+}
+[2022-02-07 06:26:10.791] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.c'tor: entered. create ConfigPathSupplier
+[2022-02-07 06:26:10.791] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.c'tor: entered. create ConfigPathSupplier
+[2022-02-07 06:26:10.791] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.c'tor: entered. create ConfigPathSupplier
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtLauncher.start : entered. args: []
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtLauncher._getLaunchHelpersByRole : entered.
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtLauncher._getLaunchHelpersByRole : returning info supplier for node when asked to serve role: node
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.startLeanFtModule (role: node) : entered. args: []
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._isLeanFtModuleRunning (role: node) : entered.
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleProcIds : entered. includeExternalProcesses: false
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtUnixHelper.getProcIdsByNodeScriptNameAndRole (node) : entered. scriptName: leanft-pkgs.js . procCmdLineRegxp: \s+--role(=|\s+)node(\s+|$) . regExpShouldMatch: true
+[2022-02-07 06:26:10.792] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : entered.
+[2022-02-07 06:26:10.793] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._isAnyConflictingModuleRunning (role: node) : no conflicting processed defined in this role and platform
+[2022-02-07 06:26:10.793] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._isAnyConflictingRoleRunning (role: node) : entered.
+[2022-02-07 06:26:10.793] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : entered.
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : cmd: ps -u "$(whoami)" -f | grep -v grep | grep "node" | grep -E 'leanft-pkgs.js' | awk '{$3=$4=$5=$6=$7=""; print $0}' . output: ,
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : found node process with different script name: ,
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleProcIds : got 1 arrays of proc IDs. combine to 1
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleProcIds : combined: []
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._isLeanFtModuleRunning (role: node) : pids: []
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : cmd: ps -u "$(whoami)" -f | grep -v grep | grep "node" | grep -E 'leanft.js|leanft-pkgs.js' | awk '{$3=$4=$5=$6=$7=""; print $0}' . output: ,
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : found node process with different script name: ,
+[2022-02-07 06:26:10.815] [TRACE] ConsoleLogger - LeanFtUnixHelper.getNodeProcesses : found node process with different script name: ,
+[2022-02-07 06:26:10.816] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.startLeanFtModule (role: node) isLeanFtModuleRunning: false . isAnyConflictingModuleRunning: false . isAnyConflictingRoleRunning: false
+[2022-02-07 06:26:10.816] [DEBUG] ConsoleLogger - LeanFtModuleLaunchHelper._launchLeanFtModule (role: node) : entered. args: []
+[2022-02-07 06:26:10.816] [TRACE] ConsoleLogger - LeanFtLauncherUtils.getNodePath : using process.execPath: /usr/local/nvm/versions/node/v12.6.0/bin/node
+[2022-02-07 06:26:10.816] [DEBUG] ConsoleLogger - LeanFtModuleLaunchHelper._launchLeanFtModule (role: node) : nodePath: /usr/local/nvm/versions/node/v12.6.0/bin/node
+[2022-02-07 06:26:10.816] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._launchLeanFtModule (role: node) : starting UFT Developer module leanft-pkgs.js with args [ 'leanft-pkgs.js', '--role=node' ] at /opt/uftdeveloper/lwe/lightweight-engine/node_modules/lightweight-packages-manager
+[2022-02-07 06:26:10.818] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.startLeanFtModule (role: node) : proc:  ChildProcess {
+  _events: [Object: null prototype] { error: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  _closesNeeded: 1,
+  _closesGot: 0,
+  connected: false,
+  signalCode: null,
+  exitCode: null,
+  killed: false,
+  spawnfile: '/usr/local/nvm/versions/node/v12.6.0/bin/node',
+  _handle: Process { onexit: [Function], pid: 67, [Symbol(owner)]: [Circular] },
+  spawnargs: [
+    '/usr/local/nvm/versions/node/v12.6.0/bin/node',
+    'leanft-pkgs.js',
+    '--role=node'
+  ],
+  pid: 67,
+  stdin: null,
+  stdout: null,
+  stderr: null,
+  stdio: [ null, null, null ]
+}
+[2022-02-07 06:26:10.819] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._connectToLeanFtModule (role: node) : entered.
+[2022-02-07 06:26:10.819] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleDetails (role: node) : entered. will add User and Global configs temporarily to settings before reading port
+[2022-02-07 06:26:10.820] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.getLeanFtModuleDefaultPort (role: node) : entered. will return default port: 8824
+[2022-02-07 06:26:10.820] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleDetails (role: node) : remove User and Global configs from settings after reading port
+[2022-02-07 06:26:10.820] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._getLeanFtModuleDetails (role: node) : returning details: { port: 8824, isSecured: false }
+[2022-02-07 06:26:10.820] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._connectToLeanFtModule (role: node) : trying to connect to ws://127.0.0.1:8824
+[2022-02-07 06:26:10.821] [DEBUG] WSCommunicationChannel - cto'r: Constructed (state: ChannelState.INIT with the following options: {
+  reconnectRetries: 12,
+  reconnectInterval: 5000,
+  ignoreCertificatesErrors: true
+}
+[2022-02-07 06:26:10.821] [INFO] WSCommunicationChannel - connect: Going to connect to ws://127.0.0.1:8824, options:{"reconnectRetries":12,"reconnectInterval":5000,"ignoreCertificatesErrors":true}
+[2022-02-07 06:26:10.821] [TRACE] WSCommunicationChannel - connect: changed state to ChannelState.CONNECTING
+[2022-02-07 06:26:10.829] [WARN] ChannelHelper - Error reported from channel 0 : { inspect: [Function: inspect] }
+[2022-02-07 06:26:10.829] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:26:10.830] [ERROR] WSCommunicationChannel - _onError: Got error while trying to connect to ws://127.0.0.1:8824 : connect ECONNREFUSED 127.0.0.1:8824
+[2022-02-07 06:26:10.830] [INFO] ChannelHelper - Channel close. ChannelId:0
+[2022-02-07 06:26:10.830] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:26:10.830] [INFO] WSCommunicationChannel - _onClose : Disconnected from  ws://127.0.0.1:8824
+[2022-02-07 06:26:10.830] [TRACE] WSCommunicationChannel - _onClose: changed state to ChannelState.RECONNECTING
+[2022-02-07 06:26:10.830] [INFO] WSCommunicationChannel - _onClose : waiting for 5  seconds in order to reconnect attempt # 1 out of 12
+[2022-02-07 06:26:15.833] [INFO] WSCommunicationChannel - connect: Going to connect to ws://127.0.0.1:8824, options:{"reconnectRetries":12,"reconnectInterval":5000,"ignoreCertificatesErrors":true}
+[2022-02-07 06:26:15.833] [TRACE] WSCommunicationChannel - connect: state remains ChannelState.RECONNECTING
+[2022-02-07 06:26:15.837] [INFO] WSCommunicationChannel - _onWSUpgradeResponse : Got upgrade response with the following headers {
+  upgrade: 'websocket',
+  connection: 'Upgrade',
+  'sec-websocket-accept': 'YdhdWFwW8GRmcFLPDgd/EPt1uag='
+}
+[2022-02-07 06:26:15.837] [TRACE] WSCommunicationChannel - _onWSUpgradeResponse : No need to authenticate - do nothing and state remains ChannelState.RECONNECTING
+[2022-02-07 06:26:15.838] [INFO] ChannelHelper - Channel connected. ChannelId:0
+[2022-02-07 06:26:15.838] [INFO] WSCommunicationChannel - _onConnect : Got connection to ws://127.0.0.1:8824
+[2022-02-07 06:26:15.838] [TRACE] WSCommunicationChannel - _onConnect : server does not require authentication. call _onConnectionEstablished
+[2022-02-07 06:26:15.838] [TRACE] WSCommunicationChannel - _onConnectionEstablished : change state to ChannelState.CONNECTED
+[2022-02-07 06:26:15.838] [TRACE] WSCommunicationChannel - _sendPendingMsgs : entered
+[2022-02-07 06:26:15.838] [TRACE] WSCommunicationChannel - _onConnectionEstablished : 1st successful connect attempt - fire onConnect
+[2022-02-07 06:26:15.838] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._connectToLeanFtModule (role: node) : connected successfully.
+[2022-02-07 06:26:15.838] [TRACE] WSCommunicationChannel - _onConnectionEstablished : heartbeat interval: undefined
+[2022-02-07 06:26:15.838] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.startLeanFtModule (role: node) : wsChannel: {
+  _logger: Logger {
+    category: 'WSCommunicationChannel',
+    _events: [Object: null prototype] { log: [Function] },
+    _eventsCount: 1,
+    level: Level { level: 5000, levelStr: 'TRACE' }
+  },
+  _address: 'ws://127.0.0.1:8824',
+  _socket: WebSocket {
+    _events: [Object: null prototype] {
+      upgrade: [Function: bound _onWSUpgradeResponse],
+      message: [Function: bound _onMessage],
+      error: [Function: bound _onError],
+      close: [Function: bound _onClose],
+      open: [Function: bound _onConnect],
+      ping: [Function: bound _onPing],
+      pong: [Function: bound _onPong]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    readyState: 1,
+    protocol: '',
+    _binaryType: 'nodebuffer',
+    _closeFrameReceived: false,
+    _closeFrameSent: false,
+    _closeMessage: '',
+    _closeTimer: null,
+    _closeCode: 1006,
+    _extensions: {},
+    _isServer: false,
+    _receiver: Receiver {
+      _writableState: [WritableState],
+      writable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 6,
+      _maxListeners: undefined,
+      _binaryType: 'nodebuffer',
+      _extensions: {},
+      _maxPayload: 104857600,
+      _bufferedBytes: 0,
+      _buffers: [],
+      _compressed: false,
+      _payloadLength: 0,
+      _mask: undefined,
+      _fragmented: 0,
+      _masked: false,
+      _fin: false,
+      _opcode: 0,
+      _totalPayloadLength: 0,
+      _messageLength: 0,
+      _fragments: [],
+      _state: 0,
+      _loop: false,
+      [Symbol(websocket)]: [Circular]
+    },
+    _sender: Sender {
+      _extensions: {},
+      _socket: [Socket],
+      _firstFragment: true,
+      _compress: false,
+      _bufferedBytes: 0,
+      _deflating: false,
+      _queue: []
+    },
+    _socket: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: true,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      parser: null,
+      _httpMessage: null,
+      timeout: 0,
+      [Symbol(asyncId)]: 98,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(websocket)]: [Circular]
+    },
+    url: 'ws://127.0.0.1:8824',
+    _req: null
+  },
+  _channelHelper: {
+    _logger: Logger {
+      category: 'ChannelHelper',
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      level: [Level]
+    },
+    _channelId: 0,
+    _webSocket: WebSocket {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      readyState: 1,
+      protocol: '',
+      _binaryType: 'nodebuffer',
+      _closeFrameReceived: false,
+      _closeFrameSent: false,
+      _closeMessage: '',
+      _closeTimer: null,
+      _closeCode: 1006,
+      _extensions: {},
+      _isServer: false,
+      _receiver: [Receiver],
+      _sender: [Sender],
+      _socket: [Socket],
+      url: 'ws://127.0.0.1:8824',
+      _req: null
+    },
+    _channel: [Circular],
+    _sendTimeout: undefined,
+    _pendingRequests: {},
+    _pingData: 'ping',
+    _partialMessage: null,
+    _onAuthenticationResponse: [Function: _onAuthenticationResponse]
+  },
+  _protocolAdapter: {
+    adaptIncoming: [Function: adaptIncoming],
+    adaptOutgoing: [Function: adaptOutgoing]
+  },
+  _options: {
+    reconnectRetries: 12,
+    reconnectInterval: 5000,
+    ignoreCertificatesErrors: true
+  },
+  _reconnectRetriesLeft: 12,
+  _inFirstConnect: false,
+  _reconnectTimerId: 0,
+  onConnect: [Function],
+  onDisconnect: [Function],
+  _state: 'ChannelState.CONNECTED',
+  _lastTimeConnectWasCalled: 1644215175833
+}
+[2022-02-07 06:26:15.839] [TRACE] WSCommunicationChannel - send: started
+[2022-02-07 06:26:15.839] [TRACE] WSCommunicationChannel - _sendBasedOnState : entered. state: ChannelState.CONNECTED
+[2022-02-07 06:26:15.839] [TRACE] WSCommunicationChannel - send: sending to WS server
+[2022-02-07 06:26:15.839] [TRACE] PendingRequest - creating pending-request - 1
+[2022-02-07 06:26:15.840] [DEBUG] ChannelHelper - sending message 1, channel: 0, msg: "{\"uid\":1,\"type\":\"request\",\"data\":{\"format\":\"LeanFT\",\"version\":\"1\",\"agentType\":\"leanFTClient\",\"data\":{\"type\":\"getEngineInfo\"}}}"
+[2022-02-07 06:26:15.844] [DEBUG] ChannelHelper - message received channel: 0, msg: {
+    "uid": 1,
+    "type": "response",
+    "data": {
+        "format": "LeanFT",
+        "version": "1",
+        "agentType": "leanFTClient",
+        "data": {
+            "status": 0,
+            "data": {
+                "License": null,
+                "Port": 8824,
+                "Version": "15.0.1.416",
+                "Role": "node",
+                "UsingSecuredConnection": false
+            }
+        }
+    }
+}
+[2022-02-07 06:26:15.844] [TRACE] PendingRequest - responding to pending-request 1 - {
+    "format": "LeanFT",
+    "version": "1",
+    "agentType": "leanFTClient",
+    "data": {
+        "status": 0,
+        "data": {
+            "License": null,
+            "Port": 8824,
+            "Version": "15.0.1.416",
+            "Role": "node",
+            "UsingSecuredConnection": false
+        }
+    }
+}
+[2022-02-07 06:26:15.844] [TRACE] WSCommunicationChannel - send: received response from WS server
+[2022-02-07 06:26:15.844] [INFO] ConsoleLogger - UFT Developer node module started successfully
+[2022-02-07 06:26:15.846] [INFO] ConsoleLogger - Role: node
+[2022-02-07 06:26:15.846] [INFO] ConsoleLogger - Port: 8824
+[2022-02-07 06:26:15.846] [INFO] ConsoleLogger - UsingSecuredConnection: false
+[2022-02-07 06:26:15.846] [INFO] ConsoleLogger - Version: 15.0.1.416, (c) Copyright 2015 - 2020 Micro Focus or one of its affiliates.
+[2022-02-07 06:26:15.846] [INFO] ConsoleLogger - Installation Folder: /opt/uftdeveloper
+[2022-02-07 06:26:15.846] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper.startLeanFtModule (role: node) : disconnect from wsChannel
+[2022-02-07 06:26:15.846] [INFO] WSCommunicationChannel - disconnect: Called
+[2022-02-07 06:26:15.847] [TRACE] WSCommunicationChannel - disconnect: changed state to ChannelState.USER_DISCONNECTING
+[2022-02-07 06:26:15.849] [INFO] ChannelHelper - Channel close. ChannelId:0
+[2022-02-07 06:26:15.849] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:26:15.849] [INFO] WSCommunicationChannel - _onClose : Disconnected from  ws://127.0.0.1:8824
+[2022-02-07 06:26:15.849] [TRACE] WSCommunicationChannel - _onClose : changed state to ChannelState.DISCONNECTED_BY_USER
+[2022-02-07 06:26:15.849] [TRACE] WSCommunicationChannel - _cancelPendingMsgs : entered
+[2022-02-07 06:26:15.849] [TRACE] ConsoleLogger - LeanFtModuleLaunchHelper._connectToLeanFtModule (role: node) : failed to connect.

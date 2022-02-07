@@ -1,0 +1,2216 @@
+[2022-02-07 06:26:11.198] [INFO] PackageManagerService - Started
+[2022-02-07 06:26:11.199] [INFO] NodePackageManagerService - Started
+[2022-02-07 06:26:11.199] [INFO] NodePackageManagerService - start : Going to load the configuration from global: /opt/uftdeveloper/lwe/lightweight-engine/config/grid-node-config.json and overrides /root/.leanft/config/grid-node-config.json
+[2022-02-07 06:26:11.200] [INFO] SettingsHelper - load : going to load settings
+[2022-02-07 06:26:11.201] [INFO] SettingsHelper - upgradeUserSettingsLocation : no previous userConfigFile found: nothing to upgrade.
+[2022-02-07 06:26:11.202] [INFO] SettingsHelper - load : loading userConfig file:  /root/.leanft/config/grid-node-config.json
+[2022-02-07 06:26:11.203] [INFO] SettingsHelper - load : loaded settings from user config file:  {}
+[2022-02-07 06:26:11.203] [INFO] SettingsHelper - load : loading globalConfig file:  /opt/uftdeveloper/lwe/lightweight-engine/config/grid-node-config.json
+[2022-02-07 06:26:11.204] [INFO] SettingsHelper - load : loaded settings from global config file:  {
+  version: 2,
+  packages: {
+    Web: {
+      chrome: null,
+      'chrome headless': null,
+      firefox: null,
+      isEnabled: true
+    }
+  },
+  identification_timeout: 20,
+  rdpConfig: { isEnabled: false, user: '', encryptedPassword: '' },
+  'lwe-address': 'ws://10.11.42.110:5092',
+  maxConcurrentLocks: 1,
+  capabilities: {}
+}
+[2022-02-07 06:26:11.204] [INFO] OsRecognizer - Going to determine OS.
+[2022-02-07 06:26:11.205] [INFO] OsRecognizer - OS is Linux.
+[2022-02-07 06:26:11.205] [INFO] NodePackageManagerService - getOverrides: not on windows platform. forcing stand alone mode
+[2022-02-07 06:26:11.205] [INFO] NodePackageManagerService - : Going to add the following settings overrides { role: 'node', lweStandAlone: true, multiProcessMode: true }
+[2022-02-07 06:26:11.205] [INFO] NodePackageManagerService - start : Loaded with the following settings  {
+  version: 2,
+  packages: {
+    Web: {
+      chrome: null,
+      'chrome headless': null,
+      firefox: null,
+      isEnabled: true
+    }
+  },
+  identification_timeout: 20,
+  rdpConfig: { isEnabled: false, user: '', encryptedPassword: '' },
+  'lwe-address': 'ws://10.11.42.110:5092',
+  maxConcurrentLocks: 1,
+  capabilities: {},
+  type: 'literal',
+  role: 'node',
+  lweStandAlone: true,
+  multiProcessMode: true
+}
+[2022-02-07 06:26:11.206] [INFO] PackageManager - createDispatcher : _standaloneMode is true and _role is node so shouldLaunchNative is false
+[2022-02-07 06:26:11.206] [INFO] PackageManager - createDispatcher : role is node so shouldInitChannelsOnlyAfterSettingsUpdate is false
+[2022-02-07 06:26:11.206] [INFO] Packages.Dispatcher - init Started
+[2022-02-07 06:26:11.206] [TRACE] PackagesManager.ChannelManager - connectToLWE : connect to WS channel (separate process)
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - init : We should not launch the native engine
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - init : set node name to ip-10-11-41-136.ap-southeast-2.compute.internal
+[2022-02-07 06:26:11.207] [TRACE] PackageManager - createNativeBridge: creating StandaloneNativeBridge when in standalone mode
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - registering handler for type: GetConfigurations
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - registering handler for type: SetConfigurations
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - registering handler for type: GetTestObjectsIdentificationsConfiguration
+[2022-02-07 06:26:11.207] [INFO] Packages.Dispatcher - registering handler for type: RestoreTestObjectsIdentificationsConfiguration
+[2022-02-07 06:26:11.208] [TRACE] PackageManager - _createTrayIconManager : entered
+[2022-02-07 06:26:11.208] [TRACE] PackageManager - _createTrayIconManager : create NodeTrayIconController
+[2022-02-07 06:26:11.208] [TRACE] PackageManager - _createTrayIconManager : create TrayIconManager
+[2022-02-07 06:26:11.208] [TRACE] TrayIconManager - constructor: 1st time we are called - init platform launchers
+[2022-02-07 06:26:11.208] [TRACE] TrayIconManager - constructor: register as a target
+[2022-02-07 06:26:11.208] [TRACE] NodeTrayIconController - registerTarget: do nothing
+[2022-02-07 06:26:11.208] [TRACE] TrayIconManager - init entered
+[2022-02-07 06:26:11.208] [TRACE] UnixTrayIconLauncher - init entered. portArgument:  . portIsBusy: false
+[2022-02-07 06:26:11.208] [TRACE] UnixTrayIconLauncher - init spawn java.exe. args: [
+  '-cp',
+  '/opt/uftdeveloper/bin/jars/notifications/*',
+  'com.hpe.leanft.trayicon.LeanFTTray',
+  '',
+  ''
+] . options: { cwd: '/opt/uftdeveloper/bin/jars/notifications' }
+[2022-02-07 06:26:11.213] [TRACE] TrayIconManager - _registerTrayIconChannel : entered
+[2022-02-07 06:26:11.213] [TRACE] TrayIconManager - _registerTrayIconChannel : a process was created by launcher so we connect to it in order to know if it is ready
+[2022-02-07 06:26:11.214] [INFO] ChannelRegisterHelper - connect: Called for channel name  TrayIconWrapper  and props =  {
+  process: ChildProcess {
+    _events: [Object: null prototype] { close: [Function] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    _closesNeeded: 3,
+    _closesGot: 0,
+    connected: false,
+    signalCode: null,
+    exitCode: null,
+    killed: false,
+    spawnfile: 'java',
+    _handle: Process {
+      onexit: [Function],
+      pid: 78,
+      [Symbol(owner)]: [Circular]
+    },
+    spawnargs: [
+      'java',
+      '-cp',
+      '/opt/uftdeveloper/bin/jars/notifications/*',
+      'com.hpe.leanft.trayicon.LeanFTTray',
+      '',
+      ''
+    ],
+    pid: 78,
+    stdin: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: false,
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: true,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 6,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stdout: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 7,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stderr: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 8,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stdio: [ [Socket], [Socket], [Socket] ]
+  },
+  msgFormat: 'empty'
+}
+[2022-02-07 06:26:11.215] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  TrayIconWrapper as Client
+[2022-02-07 06:26:11.215] [TRACE] DataAdapterFactory - createAdapter: empty
+[2022-02-07 06:26:11.215] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  TrayIconWrapper as Client Client Type is  TrayIconWrapper Stored data: { serverName: 'TrayIconWrapper', adapter: EmptyAdapter {} }
+[2022-02-07 06:26:11.218] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  lightweight-engine as Client
+[2022-02-07 06:26:11.218] [TRACE] DataAdapterFactory - createAdapter: internal
+[2022-02-07 06:26:11.218] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  lightweight-engine as Client Client Type is  lightweight-engine Stored data: {
+  serverName: 'lightweight-engine',
+  adapter: InternalAdapter {
+    logger: Logger {
+      category: 'InternalAdapter',
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      level: [Level]
+    }
+  }
+}
+[2022-02-07 06:26:11.218] [INFO] PackagesManager.ChannelManager - registerChannelHelper: channelType:  2 . channelName:  TrayIconWrapper
+[2022-02-07 06:26:11.218] [DEBUG] PackagesManager.ChannelManager - registerChannelHelper: additionalProps: {
+  process: ChildProcess {
+    _events: [Object: null prototype] { close: [Function] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    _closesNeeded: 3,
+    _closesGot: 0,
+    connected: false,
+    signalCode: null,
+    exitCode: null,
+    killed: false,
+    spawnfile: 'java',
+    _handle: Process {
+      onexit: [Function],
+      pid: 78,
+      [Symbol(owner)]: [Circular]
+    },
+    spawnargs: [
+      'java',
+      '-cp',
+      '/opt/uftdeveloper/bin/jars/notifications/*',
+      'com.hpe.leanft.trayicon.LeanFTTray',
+      '',
+      ''
+    ],
+    pid: 78,
+    stdin: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: false,
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: true,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 6,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stdout: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 7,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stderr: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      readable: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      [Symbol(asyncId)]: 8,
+      [Symbol(kHandle)]: [Pipe],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    stdio: [ [Socket], [Socket], [Socket] ]
+  },
+  msgFormat: 'empty'
+}
+[2022-02-07 06:26:11.219] [INFO] PackagesManager.ChannelManager - connectToStdChannel: started. channelName:  TrayIconWrapper . msgFormat:  empty
+[2022-02-07 06:26:11.219] [TRACE] DataAdapterFactory - createAdapter: empty
+[2022-02-07 06:26:11.220] [INFO] PackagesManager.ChannelManager - onConnect : got connection from TrayIconWrapper with id: undefined
+[2022-02-07 06:26:11.220] [TRACE] PackagesManager.ChannelManager - registerClient: TrayIconWrapper
+[2022-02-07 06:26:11.220] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: TrayIconWrapper
+[2022-02-07 06:26:11.220] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'TrayIconWrapper' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:11.220] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'TrayIconWrapper' }
+[2022-02-07 06:26:11.221] [INFO] ChannelRegisterHelper - onClientConnected: Got our connection going to resolve the promise
+[2022-02-07 06:26:11.221] [INFO] PackagesManager.ChannelManager - registerChannelHelper: channelType:  0 . channelName:  lightweight-engine
+[2022-02-07 06:26:11.221] [DEBUG] PackagesManager.ChannelManager - registerChannelHelper: additionalProps: {
+  serverAddress: 'ws://10.11.42.110:5092',
+  msgFormat: 'internal',
+  protocolType: 0,
+  channelSpecificProps: {},
+  connectHeaders: { 'leanft-client-type': 'PackageManager' },
+  authentication: undefined,
+  reconnectInterval: undefined,
+  reconnectRetries: 9007199254740991,
+  heartbeatInterval: 60000,
+  ignoreCertificatesErrors: false
+}
+[2022-02-07 06:26:11.236] [INFO] Packages.Dispatcher - init : We initialize external channels here and not in onRegisterDispatcher because we were configured not to wait to settings
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - In stand alone mode not connecting to native
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - Opening browser listener on port: 8824
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  browser as Listener
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - registerChannel : Registering channel  browser as Listener Client Type is  browser Stored data: { serverName: 'browser', adapter: null }
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - registerChannelListenerHelper: channelType:  0 . channelName:  browser . additionalProps: {
+  serverPort: 8824,
+  msgFormat: null,
+  channelSpecificProps: {},
+  socketOptions: { sendTimeout: 60000 }
+}
+[2022-02-07 06:26:11.236] [INFO] PackagesManager.ChannelManager - createWebSocketListener: started. serverName:  browser . serverPort:  8824 . msgFormat:  null socket options { sendTimeout: 60000 }
+[2022-02-07 06:26:11.236] [INFO] WSServer - c'tor: Going to create server with the following options: {
+  sendTimeout: 60000,
+  getAuthenticationInfoCB: [Function: bound getWebsocketAuthenticationInfo],
+  useSecure: false
+}
+[2022-02-07 06:26:11.238] [INFO] WSServer - server start on Port: 8824
+[2022-02-07 06:26:11.238] [INFO] PackagesManager.ChannelManager - registerChannelListenerHelper : Going to register the info {
+  channelType: 0,
+  port: 8824,
+  defaultClientType: 'browser',
+  serverName: 'browser'
+}
+[2022-02-07 06:26:11.238] [TRACE] PackageManager - onRegistrationCompleted : got registration complete to null
+[2022-02-07 06:26:11.238] [INFO] PackageManager - onRegistrationCompleted : set packageManagerId to undefined
+[2022-02-07 06:26:11.238] [TRACE] PackageManager - onRegistrationCompleted : create fallback manager
+[2022-02-07 06:26:11.238] [TRACE] PackageManager - onRegistrationCompleted : create utility command handler
+[2022-02-07 06:26:11.239] [TRACE] PackageManager - onRegistrationCompleted : create VRI handler
+[2022-02-07 06:26:11.239] [TRACE] PackageManager - onRegistrationCompleted : create user action manager
+[2022-02-07 06:26:11.239] [DEBUG] UserActionManager - Created
+[2022-02-07 06:26:11.239] [TRACE] SessionState - create StateMachine. state: 0
+[2022-02-07 06:26:11.240] [TRACE] SessionStateManager - using LocalSessionStateManager
+[2022-02-07 06:26:11.240] [INFO] PackageManager - getOverridenPackagesSettings: {"Web":{"chrome":null,"chrome headless":null,"firefox":null,"isEnabled":true}}
+[2022-02-07 06:26:11.240] [INFO] PackageManager - onRegistrationCompleted : Going to create the following packages: [ 'web' ]
+[2022-02-07 06:26:11.240] [INFO] PackageManager - createPackages: creating package:  web
+[2022-02-07 06:26:11.241] [TRACE] BrowserManager - C'tor was invoked
+[2022-02-07 06:26:11.241] [DEBUG] WebPackage.crossTechProxyFactory - created
+[2022-02-07 06:26:11.241] [TRACE] WebPackage.crossTechProxyFactory - registerContainerPackage: registering container between WebPackage  and MobilePackage
+[2022-02-07 06:26:11.242] [INFO] Packages.Dispatcher - registering package: WebPackage
+[2022-02-07 06:26:11.242] [INFO] PackageManager - registering launch handler for type: Browser
+[2022-02-07 06:26:11.242] [DEBUG] PackageManager - additional package:  SAPUI5  is handled by:  WebPackage
+[2022-02-07 06:26:11.243] [TRACE] TestObjectFactory - IEHelper.init - invoked, settings: SettingsHelper {
+  settings: {
+    version: 2,
+    packages: { Web: [Object] },
+    identification_timeout: 20,
+    rdpConfig: { isEnabled: false, user: '', encryptedPassword: '' },
+    'lwe-address': 'ws://10.11.42.110:5092',
+    maxConcurrentLocks: 1,
+    capabilities: {},
+    type: 'literal',
+    role: 'node',
+    lweStandAlone: true,
+    multiProcessMode: true
+  }
+}
+[2022-02-07 06:26:11.244] [TRACE] WebExtensibilityToolkitManager - init: product root is: /opt/uftdeveloper/lwe/lightweight-engine
+[2022-02-07 06:26:11.244] [TRACE] WebExtensibilityToolkitManager - init: Web Extensibility path is /opt/uftdeveloper/lwe/lightweight-engine/dat/Extensibility/Web
+[2022-02-07 06:26:11.244] [TRACE] WebExtensibilityToolkitManager - loadToolkits: from ../../dat/Extensibility/Web
+[2022-02-07 06:26:11.245] [INFO] Connection Manager - Opening browser listener on port: 8824
+[2022-02-07 06:26:11.245] [DEBUG] WSCommunicationChannel - cto'r: Constructed (state: ChannelState.INIT with the following options: {}
+[2022-02-07 06:26:11.245] [INFO] WSCommunicationChannel - connect: Going to connect to ws://localhost:8824, options:{}
+[2022-02-07 06:26:11.245] [TRACE] WSCommunicationChannel - connect: changed state to ChannelState.CONNECTING
+[2022-02-07 06:26:11.253] [DEBUG] WebPackage - init - stand alone mode loading identification settings from user file
+[2022-02-07 06:26:11.255] [DEBUG] IdentificationSettingsHelper<webIdentification.json> - file:  /root/.leanft/config/webIdentification.json  does not exist or inaccessible
+[2022-02-07 06:26:11.257] [DEBUG] IdentificationSettingsHelper<sapui5Identification.json> - file:  /root/.leanft/config/sapui5Identification.json  does not exist or inaccessible
+[2022-02-07 06:26:11.257] [DEBUG] WebPackage - init - stand alone mode so we create spy handler
+[2022-02-07 06:26:11.258] [INFO] Packages.Dispatcher - registering package: GeneralPackage
+[2022-02-07 06:26:11.258] [DEBUG] GeneralPackage - init: do not start native bridge since we are in standalone mode
+[2022-02-07 06:26:11.258] [TRACE] PackageManager - _createAndStartSvManager : entered
+[2022-02-07 06:26:11.258] [TRACE] SvManager - constructor: created. setting object setting: undefined . effective settings: {
+  enabled: false,
+  uiPort: 0,
+  labPort: 0,
+  inProxyPort: 9000,
+  outProxy: null,
+  scenariosFolder: '$HOME/LeanFT/sv-scenarios'
+}
+[2022-02-07 06:26:11.259] [TRACE] SvManager - startSv: SV disabled ==> do nothing
+[2022-02-07 06:26:11.259] [TRACE] PackageManager - _createAndStartSvManager : created and started
+[2022-02-07 06:26:11.260] [INFO] PackagesManager.ChannelManager - onListening: listening to:  browser
+[2022-02-07 06:26:11.260] [DEBUG] Packages.Dispatcher - onListening: got listening event from  { target: 'browser' }
+[2022-02-07 06:26:11.260] [TRACE] PackageManager - _createTrayIconManager : onListening event. eventInfo: { client: { target: 'browser' }, additionalInfo: {} }
+[2022-02-07 06:26:11.260] [TRACE] PackageManager - _createTrayIconManager : listening to our external port. call SET_PORT_INFO to update tray
+[2022-02-07 06:26:11.261] [TRACE] TrayIconManager - init entered. message: {
+  type: 'SET_PORT_INFO',
+  sessionId: null,
+  data: { SdkPort: '8824', PortIsBusy: false }
+}
+[2022-02-07 06:26:11.261] [TRACE] TrayIconManager - init : found handler for type: SET_PORT_INFO
+[2022-02-07 06:26:11.261] [TRACE] TrayIconManager - _handlePortInfo : entered.
+[2022-02-07 06:26:11.261] [TRACE] TrayIconManager - _handlePortInfo : wait for tray icon to be ready
+[2022-02-07 06:26:11.262] [TRACE] TrayIconManager - _handlePortInfo : tray icon is ready. sending message {
+  type: 'SET_PORT_INFO',
+  sessionId: null,
+  data: { SdkPort: '8824', PortIsBusy: false }
+}
+[2022-02-07 06:26:11.262] [DEBUG] Packages.Dispatcher - send: sending to target:  TrayIconWrapper
+[2022-02-07 06:26:11.263] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'TrayIconWrapper' } msg: {
+    "type": "SET_PORT_INFO",
+    "sessionId": null,
+    "data": {
+        "SdkPort": "8824",
+        "PortIsBusy": false
+    }
+}
+[2022-02-07 06:26:11.263] [TRACE] StdChannel.TrayIconWrapper - send: Started
+[2022-02-07 06:26:11.266] [WARN] WebExtensibilityToolkitManager - loadToolkits: failed to get toolkits' XMLs { inspect: [Function: inspect] }
+[2022-02-07 06:26:11.267] [WARN] WebExtensibilityToolkitManager - loadToolkits: failed to load all toolkits { inspect: [Function: inspect] }
+[2022-02-07 06:26:11.267] [WARN] PackagesManager.ChannelManager - getCertificatesFromFolder: failed to read contents of certificates folder /opt/uftdeveloper/certificates. error: Error: ENOENT: no such file or directory, scandir '/opt/uftdeveloper/certificates'
+[2022-02-07 06:26:11.267] [INFO] PackagesManager.ChannelManager - connectToWebSocketServer: started. serverAddress:  ws://10.11.42.110:5092 . channelName:  lightweight-engine . msgFormat:  internal
+[2022-02-07 06:26:11.267] [DEBUG] WSCommunicationChannel - cto'r: Constructed (state: ChannelState.INIT with the following options: {
+  heartbeatInterval: 60000,
+  connectHeaders: { 'leanft-client-type': 'PackageManager' },
+  proxyInfo: undefined,
+  ignoreCertificatesErrors: false,
+  ca: [],
+  reconnectRetries: 9007199254740991,
+  reconnectInterval: undefined,
+  authentication: undefined
+}
+[2022-02-07 06:26:11.267] [TRACE] DataAdapterFactory - createAdapter: internal
+[2022-02-07 06:26:11.268] [INFO] WSCommunicationChannel - connect: Going to connect to ws://10.11.42.110:5092, options:{"heartbeatInterval":60000,"connectHeaders":{"leanft-client-type":"PackageManager"},"ignoreCertificatesErrors":false,"ca":[],"reconnectRetries":9007199254740991}
+[2022-02-07 06:26:11.268] [TRACE] WSCommunicationChannel - connect: changed state to ChannelState.CONNECTING
+[2022-02-07 06:26:11.279] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:26:11.280] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:26:11.280] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:26:11.280] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: 9L/yJc0kzPpDuDidfi19bhfzq+w='
+]
+[2022-02-07 06:26:11.281] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:26:11.281] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 0
+[2022-02-07 06:26:11.282] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:26:11.282] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_0
+[2022-02-07 06:26:11.282] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_0' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:11.282] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_0' }
+[2022-02-07 06:26:11.283] [INFO] WSCommunicationChannel - _onWSUpgradeResponse : Got upgrade response with the following headers {
+  upgrade: 'websocket',
+  connection: 'Upgrade',
+  'sec-websocket-accept': 'PTZlrDOD3dbLbPThWdxUM1PFiMw='
+}
+[2022-02-07 06:26:11.283] [TRACE] WSCommunicationChannel - _onWSUpgradeResponse : No need to authenticate - do nothing and state remains ChannelState.CONNECTING
+[2022-02-07 06:26:11.284] [INFO] ChannelHelper - Channel connected. ChannelId:0
+[2022-02-07 06:26:11.284] [INFO] WSCommunicationChannel - _onConnect : Got connection to ws://10.11.42.110:5092
+[2022-02-07 06:26:11.284] [TRACE] WSCommunicationChannel - _onConnect : server does not require authentication. call _onConnectionEstablished
+[2022-02-07 06:26:11.285] [TRACE] WSCommunicationChannel - _onConnectionEstablished : change state to ChannelState.CONNECTED
+[2022-02-07 06:26:11.285] [TRACE] WSCommunicationChannel - _sendPendingMsgs : entered
+[2022-02-07 06:26:11.285] [TRACE] WSCommunicationChannel - _onConnectionEstablished : 1st successful connect attempt - fire onConnect
+[2022-02-07 06:26:11.285] [INFO] PackagesManager.ChannelManager - onConnect : got connection from lightweight-engine with id: undefined
+[2022-02-07 06:26:11.285] [TRACE] PackagesManager.ChannelManager - registerClient: lightweight-engine
+[2022-02-07 06:26:11.285] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: lightweight-engine
+[2022-02-07 06:26:11.285] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'lightweight-engine' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:11.285] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'lightweight-engine' }
+[2022-02-07 06:26:11.285] [INFO] Packages.Dispatcher - onConnectReconnect: Got connection to the parent dispatcher going to send registration message
+[2022-02-07 06:26:11.286] [INFO] PackageManager - getOverridenPackagesSettings: {"Web":{"chrome":null,"chrome headless":null,"firefox":null,"isEnabled":true}}
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - null entry for browser' chrome ' under 'Web' => we support the default installed version
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - null entry for browser' chrome headless ' under 'Web' => we support the default installed version
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - null entry for browser' firefox ' under 'Web' => we support the default installed version
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - no entry for browser' PhantomJS ' under 'Web' => we do not support it
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - no entry for browser' Safari ' under 'Web' => we do not support it
+[2022-02-07 06:26:11.286] [TRACE] WebPackage.getSupportedCapabilities - supported browsers according to capability keys under 'Web': { chrome: null, 'chrome headless': null, firefox: null }
+[2022-02-07 06:26:11.286] [INFO] PackageManager - getSupportedCapabilities : Package  Web  Declared the following capabilities:  { chrome: null, 'chrome headless': null, firefox: null }
+[2022-02-07 06:26:11.286] [INFO] PackageManager - getSupportedCapabilities : Going to return the following capabilities:  { web: { chrome: null, 'chrome headless': null, firefox: null } }
+[2022-02-07 06:26:11.287] [INFO] Packages.Dispatcher - loadNodeCapabilities : Configured to run as grid-node going to register with the following capabilities {
+  general: {
+    osType: 'Linux',
+    osVersion: '4.14.252-195.483.amzn2.x86_64',
+    name: 'ip-10-11-41-136.ap-southeast-2.compute.internal',
+    technologies: [ 'Web' ]
+  },
+  web: { chrome: null, 'chrome headless': null, firefox: null },
+  maxConcurrentLocks: 1,
+  custom: {}
+}
+[2022-02-07 06:26:11.287] [INFO] Packages.Dispatcher - onConnectReconnect: sending registration message: {
+  type: 'REGISTER_DISPATCHER',
+  data: {
+    type: 'PackagesManager',
+    capabilities: {
+      general: [Object],
+      web: [Object],
+      maxConcurrentLocks: 1,
+      custom: {}
+    },
+    role: 'node',
+    notifyBeforeClose: true
+  }
+}
+[2022-02-07 06:26:11.287] [DEBUG] Packages.Dispatcher - send: sending to target:  lightweight-engine
+[2022-02-07 06:26:11.287] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'lightweight-engine' } msg: {
+    "type": "REGISTER_DISPATCHER",
+    "data": {
+        "type": "PackagesManager",
+        "capabilities": {
+            "general": {
+                "osType": "Linux",
+                "osVersion": "4.14.252-195.483.amzn2.x86_64",
+                "name": "ip-10-11-41-136.ap-southeast-2.compute.internal",
+                "technologies": [
+                    "Web"
+                ]
+            },
+            "web": {
+                "chrome": null,
+                "chrome headless": null,
+                "firefox": null
+            },
+            "maxConcurrentLocks": 1,
+            "custom": {}
+        },
+        "role": "node",
+        "notifyBeforeClose": true
+    }
+}
+[2022-02-07 06:26:11.287] [TRACE] WSCommunicationChannel - send: started
+[2022-02-07 06:26:11.287] [TRACE] WSCommunicationChannel - _sendBasedOnState : entered. state: ChannelState.CONNECTED
+[2022-02-07 06:26:11.287] [TRACE] WSCommunicationChannel - send: sending to WS server
+[2022-02-07 06:26:11.288] [TRACE] PendingRequest - creating pending-request - 1
+[2022-02-07 06:26:11.288] [DEBUG] ChannelHelper - sending message 1, channel: 0, msg: "{\"uid\":1,\"type\":\"request\",\"data\":{\"format\":\"internal\",\"data\":{\"type\":\"REGISTER_DISPATCHER\",\"data\":{\"type\":\"PackagesManager\",\"capabilities\":{\"general\":{\"osType\":\"Linux\",\"osVersion\":\"4.14.252-195.483.amzn2.x86_64\",\"name\":\"ip-10-11-41-136.ap-southeast-2.compute.internal\",\"technologies\":[\"Web\"]},\"web\":{\"chrome\":null,\"chrome headless\":null,\"firefox\":null},\"maxConcurrentLocks\":1,\"custom\":{}},\"role\":\"node\",\"notifyBeforeClose\":true},\"to\":{\"target\":\"lightweight-engine\"}}}}"
+[2022-02-07 06:26:11.289] [TRACE] WSCommunicationChannel - _onConnectionEstablished : heartbeat interval: 60000
+[2022-02-07 06:26:11.289] [INFO] WSCommunicationChannel - _onConnectionEstablished : starting heartbeat interval: 60000
+[2022-02-07 06:26:11.289] [DEBUG] ChannelHelper - startHeartbeat: starting heartbeat with interval 60000
+[2022-02-07 06:26:11.290] [INFO] WSCommunicationChannel - _onWSUpgradeResponse : Got upgrade response with the following headers {
+  upgrade: 'websocket',
+  connection: 'Upgrade',
+  'sec-websocket-accept': '9L/yJc0kzPpDuDidfi19bhfzq+w='
+}
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _onWSUpgradeResponse : No need to authenticate - do nothing and state remains ChannelState.CONNECTING
+[2022-02-07 06:26:11.290] [INFO] ChannelHelper - Channel connected. ChannelId:0
+[2022-02-07 06:26:11.290] [INFO] WSCommunicationChannel - _onConnect : Got connection to ws://localhost:8824
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _onConnect : server does not require authentication. call _onConnectionEstablished
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _onConnectionEstablished : change state to ChannelState.CONNECTED
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _sendPendingMsgs : entered
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _onConnectionEstablished : 1st successful connect attempt - fire onConnect
+[2022-02-07 06:26:11.290] [INFO] Connection Manager - onConnect
+[2022-02-07 06:26:11.290] [TRACE] WSCommunicationChannel - _onConnectionEstablished : heartbeat interval: undefined
+[2022-02-07 06:26:11.292] [DEBUG] ChannelHelper - message received channel: 0, msg: {
+    "uid": 1,
+    "type": "response",
+    "data": {
+        "format": "internal",
+        "data": {
+            "type": "REGISTER_DISPATCHER",
+            "data": {
+                "settings": {
+                    "labManager": {
+                        "useLocalLabManager": true,
+                        "environments": [
+                            "web",
+                            "mobile",
+                            "desktop"
+                        ]
+                    },
+                    "leaveLweViewerBackEndRunningForPerformance": true,
+                    "addLocalContext": false,
+                    "role": "grid",
+                    "launchManagement": true,
+                    "version": 2,
+                    "packages": {
+                        "Web": {
+                            "isEnabled": true
+                        },
+                        "SAPUI5": {
+                            "isEnabled": false
+                        }
+                    },
+                    "idle_shutdown_timeout": 240,
+                    "identification_timeout": 20,
+                    "rdpConfig": {},
+                    "labs": {
+                        "mobileCenter": {
+                            "serverInfo": {
+                                "address": null,
+                                "encryptedPassword": "",
+                                "ignoreCertificatesErrors": false,
+                                "useProxy": false,
+                                "user": ""
+                            },
+                            "showVncDuringReplay": false
+                        },
+                        "srf": {
+                            "serverInfo": {
+                                "address": null,
+                                "clientID": null,
+                                "encryptedClientSecret": "",
+                                "ignoreCertificatesErrors": false,
+                                "useProxy": false
+                            },
+                            "showVncDuringReplay": false
+                        }
+                    },
+                    "proxyInfo": {
+                        "encryptedPassword": "",
+                        "proxyAddress": null,
+                        "useAuthentication": false,
+                        "userName": "user"
+                    },
+                    "port": 5092,
+                    "connection-mode": "remote-nonsecured",
+                    "gridNodeWaitTimeout": 180000,
+                    "licenseTimeout": 30,
+                    "maxLicensesAllowed": 5,
+                    "managementPort": 8080,
+                    "rest-api-port": 5093,
+                    "usageTracking": false,
+                    "type": "literal",
+                    "lweStandAlone": true,
+                    "noViewer": true,
+                    "multiProcessMode": true,
+                    "noExecuteOnDefaultContext": true
+                },
+                "id": "PackageManager_2"
+            },
+            "to": {
+                "target": "lightweight-engine"
+            },
+            "status": 0
+        }
+    }
+}
+[2022-02-07 06:26:11.292] [TRACE] PendingRequest - responding to pending-request 1 - {
+    "format": "internal",
+    "data": {
+        "type": "REGISTER_DISPATCHER",
+        "data": {
+            "settings": {
+                "labManager": {
+                    "useLocalLabManager": true,
+                    "environments": [
+                        "web",
+                        "mobile",
+                        "desktop"
+                    ]
+                },
+                "leaveLweViewerBackEndRunningForPerformance": true,
+                "addLocalContext": false,
+                "role": "grid",
+                "launchManagement": true,
+                "version": 2,
+                "packages": {
+                    "Web": {
+                        "isEnabled": true
+                    },
+                    "SAPUI5": {
+                        "isEnabled": false
+                    }
+                },
+                "idle_shutdown_timeout": 240,
+                "identification_timeout": 20,
+                "rdpConfig": {},
+                "labs": {
+                    "mobileCenter": {
+                        "serverInfo": {
+                            "address": null,
+                            "encryptedPassword": "",
+                            "ignoreCertificatesErrors": false,
+                            "useProxy": false,
+                            "user": ""
+                        },
+                        "showVncDuringReplay": false
+                    },
+                    "srf": {
+                        "serverInfo": {
+                            "address": null,
+                            "clientID": null,
+                            "encryptedClientSecret": "",
+                            "ignoreCertificatesErrors": false,
+                            "useProxy": false
+                        },
+                        "showVncDuringReplay": false
+                    }
+                },
+                "proxyInfo": {
+                    "encryptedPassword": "",
+                    "proxyAddress": null,
+                    "useAuthentication": false,
+                    "userName": "user"
+                },
+                "port": 5092,
+                "connection-mode": "remote-nonsecured",
+                "gridNodeWaitTimeout": 180000,
+                "licenseTimeout": 30,
+                "maxLicensesAllowed": 5,
+                "managementPort": 8080,
+                "rest-api-port": 5093,
+                "usageTracking": false,
+                "type": "literal",
+                "lweStandAlone": true,
+                "noViewer": true,
+                "multiProcessMode": true,
+                "noExecuteOnDefaultContext": true
+            },
+            "id": "PackageManager_2"
+        },
+        "to": {
+            "target": "lightweight-engine"
+        },
+        "status": 0
+    }
+}
+[2022-02-07 06:26:11.292] [TRACE] WSCommunicationChannel - send: received response from WS server
+[2022-02-07 06:26:11.293] [INFO] Packages.Dispatcher - registrationCompleted : Called, and the given id is PackageManager_2
+[2022-02-07 06:26:11.293] [INFO] Packages.Dispatcher - registrationCompleted :  contextId changed. Going to notify to listeners. event data: {"client":{"target":"lightweight-engine"},"newContextId":"PackageManager_2"}
+[2022-02-07 06:26:11.293] [TRACE] PackageManager - _onContextIdChanged : entered. will replace PkgMgr ID and update members
+[2022-02-07 06:26:11.293] [TRACE] PackageManager - _onContextIdChanged - replaced target of registered package WebPackage
+[2022-02-07 06:26:11.293] [TRACE] PackageManager - _onContextIdChanged - replaced target of registered package GeneralPackage
+[2022-02-07 06:26:11.294] [WARN] PackageManager - _onContextIdChanged - did not replace target of endpoint WebPackage because old target is PackageManager_2
+[2022-02-07 06:26:11.294] [WARN] PackageManager - _onContextIdChanged - did not replace target of endpoint WebPackage because old target is PackageManager_2
+[2022-02-07 06:26:11.294] [WARN] PackageManager - _onContextIdChanged - did not replace target of endpoint GeneralPackage because old target is PackageManager_2
+[2022-02-07 06:26:11.294] [TRACE] PackageManager - _onContextIdChanged - replaced target of launch handler WebPackage
+[2022-02-07 06:26:11.294] [TRACE] NodeSettingsMAnager - _onContextIdChanged: replace internal general package target
+[2022-02-07 06:26:11.294] [TRACE] UtilityCommandsHandler - _onContextIdChanged : replace package manager target ID
+[2022-02-07 06:26:11.294] [TRACE] VisualRelationsHelper - _onContextIdChanged : replace package manager target ID
+[2022-02-07 06:26:11.294] [TRACE] WebPackage - onContextIdChanged : replace package manager ID
+[2022-02-07 06:26:11.294] [TRACE] GeneralPackage - _onContextIdChanged : replace package manager ID
+[2022-02-07 06:26:12.022] [DEBUG] StdChannel.TrayIconWrapper - message received:  {"uid":1,"data":{"agentType":"leanFTClient","data":{"data":{},"type":"SET_PORT_INFO","status":0},"format":"LeanFT","version":"1"},"type":"response"}
+[2022-02-07 06:26:15.835] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:26:15.835] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:26:15.835] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:26:15.835] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: YdhdWFwW8GRmcFLPDgd/EPt1uag='
+]
+[2022-02-07 06:26:15.835] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:26:15.835] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 1
+[2022-02-07 06:26:15.835] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:26:15.835] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_1
+[2022-02-07 06:26:15.835] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_1' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:15.835] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_1' }
+[2022-02-07 06:26:15.841] [DEBUG] ChannelHelper - message received channel: 1, msg: {
+    "uid": 1,
+    "type": "request",
+    "data": {
+        "format": "LeanFT",
+        "version": "1",
+        "agentType": "leanFTClient",
+        "data": {
+            "type": "getEngineInfo"
+        }
+    }
+}
+[2022-02-07 06:26:15.841] [DEBUG] WrappedChannel - Message received. ChannelId:1
+[2022-02-07 06:26:15.841] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_1 msg:  {
+    "format": "LeanFT",
+    "version": "1",
+    "agentType": "leanFTClient",
+    "data": {
+        "type": "getEngineInfo"
+    }
+}
+[2022-02-07 06:26:15.841] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_1
+[2022-02-07 06:26:15.841] [TRACE] DataAdapterFactory - createAdapter: LeanFT
+[2022-02-07 06:26:15.841] [DEBUG] Packages.Dispatcher - handling message  {
+    "type": "getEngineInfo"
+}
+[2022-02-07 06:26:15.841] [WARN] Packages.Dispatcher - handle: received message with no target:  {
+    "type": "getEngineInfo"
+}
+[2022-02-07 06:26:15.841] [DEBUG] Packages.Dispatcher - handleByMsgType message  {
+    "type": "getEngineInfo"
+}
+[2022-02-07 06:26:15.841] [DEBUG] Packages.Dispatcher - handleByMsgType: handling type: getEngineInfo
+[2022-02-07 06:26:15.841] [DEBUG] Packages.Dispatcher - handleByMsgType: Found handler for type: getEngineInfo
+[2022-02-07 06:26:15.842] [DEBUG] PackageManager - handling message:  { type: 'ShouldAnswerGetEngineInfo', sessionId: null }
+[2022-02-07 06:26:15.842] [DEBUG] PackageManager - Found handler for type:  ShouldAnswerGetEngineInfo
+[2022-02-07 06:26:15.842] [TRACE] Packages.Dispatcher - _getVersionFromVersionFile: load from: /opt/uftdeveloper/version.json
+[2022-02-07 06:26:15.842] [TRACE] Packages.Dispatcher - _getVersionFromVersionFile: loaded version: {"major":15,"minor":0,"build":416,"hotUpdate":0,"svcpackVersion":1,"marketingVersion":"15.0"} . returning: 15.0.1.416
+[2022-02-07 06:26:15.842] [TRACE] Packages.Dispatcher - getVersion: returning 15.0.1.416
+[2022-02-07 06:26:15.842] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_1
+[2022-02-07 06:26:15.842] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "LeanFT",
+    "version": "1",
+    "agentType": "leanFTClient",
+    "data": {
+        "status": 0,
+        "data": {
+            "License": null,
+            "Port": 8824,
+            "Version": "15.0.1.416",
+            "Role": "node",
+            "UsingSecuredConnection": false
+        }
+    }
+}
+[2022-02-07 06:26:15.842] [DEBUG] ChannelHelper - sending response. channel: 1, msg: "{\"uid\":1,\"type\":\"response\",\"data\":{\"format\":\"LeanFT\",\"version\":\"1\",\"agentType\":\"leanFTClient\",\"data\":{\"status\":0,\"data\":{\"License\":null,\"Port\":8824,\"Version\":\"15.0.1.416\",\"Role\":\"node\",\"UsingSecuredConnection\":false}}}}"
+[2022-02-07 06:26:15.849] [INFO] ChannelHelper - Channel close. ChannelId:1
+[2022-02-07 06:26:15.850] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:26:15.850] [INFO] WrappedChannel - Channel close. ChannelId:1
+[2022-02-07 06:26:15.850] [TRACE] PackagesManager.ChannelManager - onDisconnect: disconnecting from browser_1
+[2022-02-07 06:26:15.850] [INFO] Packages.Dispatcher - onDisconnect: disconnected from  { target: 'browser_1' }
+[2022-02-07 06:26:17.814] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:26:17.814] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:26:17.814] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:26:17.814] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: AMaFsHGXhM2WX99yOsEaNsmD0KE='
+]
+[2022-02-07 06:26:17.815] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:26:17.815] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 2
+[2022-02-07 06:26:17.815] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:26:17.815] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_2
+[2022-02-07 06:26:17.815] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_2' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:17.815] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_2' }
+[2022-02-07 06:26:17.835] [DEBUG] ChannelHelper - message received channel: 2, msg: {
+    "type": "voidRequest",
+    "uid": 0,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Chrome 98.0",
+                "browserSessionId": "1644215177824.2603",
+                "WEB_PN_ID": {
+                    "browser": 2,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:17.835] [DEBUG] WrappedChannel - Message received. ChannelId:2
+[2022-02-07 06:26:17.835] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_2 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Chrome 98.0",
+            "browserSessionId": "1644215177824.2603",
+            "WEB_PN_ID": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:17.835] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_2
+[2022-02-07 06:26:17.835] [TRACE] DataAdapterFactory - createAdapter: WebMessageFormat
+[2022-02-07 06:26:17.836] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215177824.2603",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:26:17.836] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:26:17.836] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:26:17.836] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215177824.2603",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_2' }
+[2022-02-07 06:26:17.837] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:17.837] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:17.837] [TRACE] BrowserManager - onBrowserCreated: current count = 0, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":2,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Chrome 98.0","browserSessionId":"1644215177824.2603","WEB_PN_ID":{"browser":2,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:26:17.838] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_2' },
+  data: {
+    hwnd: 0,
+    version: 'Chrome 98.0',
+    browserSessionId: '1644215177824.2603',
+    WEB_PN_ID: { browser: 2, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:26:17.838] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_2
+[2022-02-07 06:26:17.838] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_2' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:26:17.838] [TRACE] PendingRequest - creating pending-request - 1
+[2022-02-07 06:26:17.839] [DEBUG] ChannelHelper - sending message 1, channel: 2, msg: "{\"uid\":1,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":2,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:26:17.839] [TRACE] PendingRequest - setting timeout for pending-request 1
+[2022-02-07 06:26:17.840] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:26:17.840] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:26:17.840] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_2
+[2022-02-07 06:26:17.840] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:26:17.842] [DEBUG] ChannelHelper - message received channel: 2, msg: {
+    "type": "response",
+    "uid": 1,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:17.843] [TRACE] PendingRequest - responding to pending-request 1 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:17.843] [INFO] PendingRequest - cleared timeout for pending-request 1
+[2022-02-07 06:26:20.119] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:26:20.119] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:26:20.119] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:26:20.119] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: 1OaY/6J2S0iDqgRb2fKOvvdGhbE='
+]
+[2022-02-07 06:26:20.120] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:26:20.120] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 3
+[2022-02-07 06:26:20.120] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:26:20.120] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_3
+[2022-02-07 06:26:20.120] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_3' } . Forwarding to onConnectReconnect
+[2022-02-07 06:26:20.120] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_3' }
+[2022-02-07 06:26:20.175] [DEBUG] ChannelHelper - message received channel: 3, msg: {
+    "type": "voidRequest",
+    "uid": 0,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 1,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Mozilla Firefox 88.0",
+                "browserSessionId": "1644215179998.2354",
+                "WEB_PN_ID": {
+                    "browser": 1,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:20.176] [DEBUG] WrappedChannel - Message received. ChannelId:3
+[2022-02-07 06:26:20.176] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_3 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 1,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Mozilla Firefox 88.0",
+            "browserSessionId": "1644215179998.2354",
+            "WEB_PN_ID": {
+                "browser": 1,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:20.176] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_3
+[2022-02-07 06:26:20.176] [TRACE] DataAdapterFactory - createAdapter: WebMessageFormat
+[2022-02-07 06:26:20.176] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 1,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Mozilla Firefox 88.0",
+        "browserSessionId": "1644215179998.2354",
+        "WEB_PN_ID": {
+            "browser": 1,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:26:20.176] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:26:20.176] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:26:20.176] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 1,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Mozilla Firefox 88.0",
+        "browserSessionId": "1644215179998.2354",
+        "WEB_PN_ID": {
+            "browser": 1,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_3' }
+[2022-02-07 06:26:20.176] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:20.176] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:20.176] [TRACE] BrowserManager - onBrowserCreated: current count = 1, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":1,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Mozilla Firefox 88.0","browserSessionId":"1644215179998.2354","WEB_PN_ID":{"browser":1,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:26:20.177] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_3' },
+  data: {
+    hwnd: 0,
+    version: 'Mozilla Firefox 88.0',
+    browserSessionId: '1644215179998.2354',
+    WEB_PN_ID: { browser: 1, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:26:20.177] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_3
+[2022-02-07 06:26:20.177] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_3' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 1,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:26:20.177] [TRACE] PendingRequest - creating pending-request - 2
+[2022-02-07 06:26:20.177] [DEBUG] ChannelHelper - sending message 2, channel: 3, msg: "{\"uid\":2,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":1,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:26:20.178] [TRACE] PendingRequest - setting timeout for pending-request 2
+[2022-02-07 06:26:20.178] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:26:20.178] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:26:20.178] [DEBUG] ChannelHelper - message received channel: 3, msg: {
+    "type": "voidRequest",
+    "uid": 1,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Mozilla Firefox 88.0",
+                "browserSessionId": "1644215180098.3225",
+                "WEB_PN_ID": {
+                    "browser": 2,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:20.178] [DEBUG] WrappedChannel - Message received. ChannelId:3
+[2022-02-07 06:26:20.178] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_3 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Mozilla Firefox 88.0",
+            "browserSessionId": "1644215180098.3225",
+            "WEB_PN_ID": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:20.178] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Mozilla Firefox 88.0",
+        "browserSessionId": "1644215180098.3225",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:26:20.178] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:26:20.178] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:26:20.178] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Mozilla Firefox 88.0",
+        "browserSessionId": "1644215180098.3225",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_3' }
+[2022-02-07 06:26:20.178] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:20.178] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:26:20.179] [TRACE] BrowserManager - onBrowserCreated: current count = 2, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":2,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Mozilla Firefox 88.0","browserSessionId":"1644215180098.3225","WEB_PN_ID":{"browser":2,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:26:20.179] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_3' },
+  data: {
+    hwnd: 0,
+    version: 'Mozilla Firefox 88.0',
+    browserSessionId: '1644215180098.3225',
+    WEB_PN_ID: { browser: 2, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:26:20.179] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_3
+[2022-02-07 06:26:20.179] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_3' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:26:20.179] [TRACE] PendingRequest - creating pending-request - 3
+[2022-02-07 06:26:20.179] [DEBUG] ChannelHelper - sending message 3, channel: 3, msg: "{\"uid\":3,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":2,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:26:20.179] [TRACE] PendingRequest - setting timeout for pending-request 3
+[2022-02-07 06:26:20.179] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:26:20.188] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:26:20.189] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_3
+[2022-02-07 06:26:20.189] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:26:20.189] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_3
+[2022-02-07 06:26:20.189] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:26:20.216] [DEBUG] ChannelHelper - message received channel: 3, msg: {
+    "type": "response",
+    "uid": 2,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 1,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:20.216] [TRACE] PendingRequest - responding to pending-request 2 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 1,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:20.216] [INFO] PendingRequest - cleared timeout for pending-request 2
+[2022-02-07 06:26:20.219] [DEBUG] ChannelHelper - message received channel: 3, msg: {
+    "type": "response",
+    "uid": 3,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:26:20.219] [TRACE] PendingRequest - responding to pending-request 3 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:26:20.219] [INFO] PendingRequest - cleared timeout for pending-request 3
+[2022-02-07 06:27:13.596] [INFO] ChannelHelper - Channel close. ChannelId:3
+[2022-02-07 06:27:13.596] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:27:13.596] [INFO] WrappedChannel - Channel close. ChannelId:3
+[2022-02-07 06:27:13.596] [TRACE] PackagesManager.ChannelManager - onDisconnect: disconnecting from browser_3
+[2022-02-07 06:27:13.596] [INFO] Packages.Dispatcher - onDisconnect: disconnected from  { target: 'browser_3' }
+[2022-02-07 06:27:13.633] [INFO] ChannelHelper - Channel close. ChannelId:2
+[2022-02-07 06:27:13.633] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:27:13.633] [INFO] WrappedChannel - Channel close. ChannelId:2
+[2022-02-07 06:27:13.633] [TRACE] PackagesManager.ChannelManager - onDisconnect: disconnecting from browser_2
+[2022-02-07 06:27:13.633] [INFO] Packages.Dispatcher - onDisconnect: disconnected from  { target: 'browser_2' }
+[2022-02-07 06:27:16.438] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:27:16.438] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:27:16.438] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:27:16.438] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: uUoRV4u8BwJ38l+8w0Ro7h49eQc='
+]
+[2022-02-07 06:27:16.438] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:27:16.438] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 4
+[2022-02-07 06:27:16.438] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:27:16.438] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_4
+[2022-02-07 06:27:16.438] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_4' } . Forwarding to onConnectReconnect
+[2022-02-07 06:27:16.438] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_4' }
+[2022-02-07 06:27:16.457] [DEBUG] ChannelHelper - message received channel: 4, msg: {
+    "type": "voidRequest",
+    "uid": 0,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Chrome 98.0",
+                "browserSessionId": "1644215236445.5469",
+                "WEB_PN_ID": {
+                    "browser": 2,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:16.457] [DEBUG] WrappedChannel - Message received. ChannelId:4
+[2022-02-07 06:27:16.457] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_4 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Chrome 98.0",
+            "browserSessionId": "1644215236445.5469",
+            "WEB_PN_ID": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:16.457] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_4
+[2022-02-07 06:27:16.457] [TRACE] DataAdapterFactory - createAdapter: WebMessageFormat
+[2022-02-07 06:27:16.457] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215236445.5469",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:27:16.457] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:27:16.457] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:27:16.457] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215236445.5469",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_4' }
+[2022-02-07 06:27:16.457] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:16.457] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:16.457] [TRACE] BrowserManager - onBrowserCreated: current count = 3, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":2,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Chrome 98.0","browserSessionId":"1644215236445.5469","WEB_PN_ID":{"browser":2,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:27:16.457] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_4' },
+  data: {
+    hwnd: 0,
+    version: 'Chrome 98.0',
+    browserSessionId: '1644215236445.5469',
+    WEB_PN_ID: { browser: 2, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:27:16.457] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_4
+[2022-02-07 06:27:16.458] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_4' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:27:16.458] [TRACE] PendingRequest - creating pending-request - 4
+[2022-02-07 06:27:16.458] [DEBUG] ChannelHelper - sending message 4, channel: 4, msg: "{\"uid\":4,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":2,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:27:16.458] [TRACE] PendingRequest - setting timeout for pending-request 4
+[2022-02-07 06:27:16.458] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:27:16.458] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:27:16.458] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_4
+[2022-02-07 06:27:16.458] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:27:16.462] [DEBUG] ChannelHelper - message received channel: 4, msg: {
+    "type": "response",
+    "uid": 4,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:16.462] [TRACE] PendingRequest - responding to pending-request 4 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:16.462] [INFO] PendingRequest - cleared timeout for pending-request 4
+[2022-02-07 06:27:17.644] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:27:17.644] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:27:17.644] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:27:17.644] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: 4yk+8ZPoLOq8/XcnobS/rE8ych0='
+]
+[2022-02-07 06:27:17.645] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:27:17.645] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 5
+[2022-02-07 06:27:17.645] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:27:17.645] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_5
+[2022-02-07 06:27:17.645] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_5' } . Forwarding to onConnectReconnect
+[2022-02-07 06:27:17.645] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_5' }
+[2022-02-07 06:27:17.655] [DEBUG] ChannelHelper - message received channel: 5, msg: {
+    "type": "voidRequest",
+    "uid": 0,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Chrome 98.0",
+                "browserSessionId": "1644215237648.8152",
+                "WEB_PN_ID": {
+                    "browser": 2,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:17.655] [DEBUG] WrappedChannel - Message received. ChannelId:5
+[2022-02-07 06:27:17.655] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_5 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Chrome 98.0",
+            "browserSessionId": "1644215237648.8152",
+            "WEB_PN_ID": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:17.655] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_5
+[2022-02-07 06:27:17.655] [TRACE] DataAdapterFactory - createAdapter: WebMessageFormat
+[2022-02-07 06:27:17.655] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215237648.8152",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:27:17.655] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:27:17.655] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:27:17.656] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215237648.8152",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_5' }
+[2022-02-07 06:27:17.656] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:17.656] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:17.656] [TRACE] BrowserManager - onBrowserCreated: current count = 4, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":2,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Chrome 98.0","browserSessionId":"1644215237648.8152","WEB_PN_ID":{"browser":2,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:27:17.656] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_5' },
+  data: {
+    hwnd: 0,
+    version: 'Chrome 98.0',
+    browserSessionId: '1644215237648.8152',
+    WEB_PN_ID: { browser: 2, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:27:17.656] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_5
+[2022-02-07 06:27:17.656] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_5' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:27:17.656] [TRACE] PendingRequest - creating pending-request - 5
+[2022-02-07 06:27:17.656] [DEBUG] ChannelHelper - sending message 5, channel: 5, msg: "{\"uid\":5,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":2,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:27:17.656] [TRACE] PendingRequest - setting timeout for pending-request 5
+[2022-02-07 06:27:17.656] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:27:17.656] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:27:17.656] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_5
+[2022-02-07 06:27:17.656] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:27:17.660] [DEBUG] ChannelHelper - message received channel: 5, msg: {
+    "type": "response",
+    "uid": 5,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:17.660] [TRACE] PendingRequest - responding to pending-request 5 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:17.660] [INFO] PendingRequest - cleared timeout for pending-request 5
+[2022-02-07 06:27:19.332] [INFO] ChannelHelper - Channel close. ChannelId:4
+[2022-02-07 06:27:19.332] [INFO] ChannelHelper - _cleanPendingRequests: number of pending requests is 0
+[2022-02-07 06:27:19.332] [INFO] WrappedChannel - Channel close. ChannelId:4
+[2022-02-07 06:27:19.332] [TRACE] PackagesManager.ChannelManager - onDisconnect: disconnecting from browser_4
+[2022-02-07 06:27:19.332] [INFO] Packages.Dispatcher - onDisconnect: disconnected from  { target: 'browser_4' }
+[2022-02-07 06:27:19.470] [TRACE] WSServer - _onVerifyConnection : Didnt get any verfication function -> client is allowed
+[2022-02-07 06:27:19.470] [TRACE] WSServer - _onUpgradeHewadersResponse : Got upgrade request from  ::ffff:127.0.0.1
+[2022-02-07 06:27:19.470] [TRACE] WSServer - _onUpgradeHewadersResponse :No additional headers are requireed
+[2022-02-07 06:27:19.470] [TRACE] WSServer - _onUpgradeHewadersResponse : Going to return the following headers [
+  'HTTP/1.1 101 Switching Protocols',
+  'Upgrade: websocket',
+  'Connection: Upgrade',
+  'Sec-WebSocket-Accept: kbP3axm0KQYnsRMzti2SX/CZJ+Y='
+]
+[2022-02-07 06:27:19.470] [TRACE] WSServer - _onConnect : Started
+[2022-02-07 06:27:19.470] [INFO] PackagesManager.ChannelManager - onConnect : got connection from browser with id: 6
+[2022-02-07 06:27:19.470] [TRACE] PackagesManager.ChannelManager - registerClient: browser
+[2022-02-07 06:27:19.470] [TRACE] PackagesManager.ChannelManager - registerClient: connected. key: browser_6
+[2022-02-07 06:27:19.470] [INFO] Packages.Dispatcher - onConnect: Reconnected to { target: 'browser_6' } . Forwarding to onConnectReconnect
+[2022-02-07 06:27:19.470] [INFO] Packages.Dispatcher - onConnectReconnect: client: { target: 'browser_6' }
+[2022-02-07 06:27:19.476] [DEBUG] ChannelHelper - message received channel: 6, msg: {
+    "type": "voidRequest",
+    "uid": 0,
+    "data": {
+        "data": {
+            "_msgType": "EVENT_BROWSER_CREATE",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "hwnd": 0,
+                "version": "Chrome 98.0",
+                "browserSessionId": "1644215239472.4016",
+                "WEB_PN_ID": {
+                    "browser": 2,
+                    "page": -1,
+                    "frame": -1,
+                    "object": null
+                }
+            }
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:19.476] [DEBUG] WrappedChannel - Message received. ChannelId:6
+[2022-02-07 06:27:19.476] [DEBUG] PackagesManager.ChannelManager - handle: received request from:  browser_6 msg:  {
+    "data": {
+        "_msgType": "EVENT_BROWSER_CREATE",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "hwnd": 0,
+            "version": "Chrome 98.0",
+            "browserSessionId": "1644215239472.4016",
+            "WEB_PN_ID": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            }
+        }
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:19.476] [DEBUG] PackagesManager.ChannelManager - handle: creating adapter for:  browser_6
+[2022-02-07 06:27:19.476] [TRACE] DataAdapterFactory - createAdapter: WebMessageFormat
+[2022-02-07 06:27:19.476] [DEBUG] Packages.Dispatcher - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215239472.4016",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+}
+[2022-02-07 06:27:19.477] [DEBUG] Packages.Dispatcher - handle: Forwarding to package: WebPackage
+[2022-02-07 06:27:19.477] [DEBUG] Packages.Dispatcher - handle: Forwarding to target: { target: 'PackageManager', package: 'WebPackage' }
+[2022-02-07 06:27:19.477] [DEBUG] WebPackage - handling message  {
+    "_msgType": "EVENT_BROWSER_CREATE",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "type": "EVENT_BROWSER_CREATE",
+    "to": {
+        "target": "PackageManager",
+        "package": "WebPackage"
+    },
+    "data": {
+        "hwnd": 0,
+        "version": "Chrome 98.0",
+        "browserSessionId": "1644215239472.4016",
+        "WEB_PN_ID": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        }
+    }
+} from { target: 'browser_6' }
+[2022-02-07 06:27:19.477] [DEBUG] WebPackage - Found handler for type: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:19.477] [TRACE] WebPackage - forwardToBrowserManager: EVENT_BROWSER_CREATE
+[2022-02-07 06:27:19.477] [TRACE] BrowserManager - onBrowserCreated: current count = 5, message: {"_msgType":"EVENT_BROWSER_CREATE","_to":{"browser":2,"page":-1,"frame":-1,"object":null},"type":"EVENT_BROWSER_CREATE","to":{"target":"PackageManager","package":"WebPackage"},"data":{"hwnd":0,"version":"Chrome 98.0","browserSessionId":"1644215239472.4016","WEB_PN_ID":{"browser":2,"page":-1,"frame":-1,"object":null}}}
+[2022-02-07 06:27:19.477] [TRACE] WebPackage - browserCreated: RuntimeBrowserData {
+  target: { target: 'browser_6' },
+  data: {
+    hwnd: 0,
+    version: 'Chrome 98.0',
+    browserSessionId: '1644215239472.4016',
+    WEB_PN_ID: { browser: 2, page: -1, frame: -1, object: null }
+  }
+}
+[2022-02-07 06:27:19.477] [DEBUG] Packages.Dispatcher - send: sending to target:  browser_6
+[2022-02-07 06:27:19.477] [DEBUG] PackagesManager.ChannelManager - send : target:  { target: 'browser_6' } msg: {
+    "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+    "_to": {
+        "browser": 2,
+        "page": -1,
+        "frame": -1,
+        "object": null
+    },
+    "_data": {
+        "name": [
+            [
+                "WebActivityState",
+                "enablewebrolebasedkit"
+            ]
+        ],
+        "value": [
+            [
+                2,
+                true
+            ]
+        ]
+    },
+    "_attr_names": []
+}
+[2022-02-07 06:27:19.477] [TRACE] PendingRequest - creating pending-request - 6
+[2022-02-07 06:27:19.477] [DEBUG] ChannelHelper - sending message 6, channel: 6, msg: "{\"uid\":6,\"type\":\"request\",\"data\":{\"format\":\"WebMessageFormat\",\"data\":{\"_msgType\":\"SRVC_SET_GLOBAL_VARIABLES\",\"_to\":{\"browser\":2,\"page\":-1,\"frame\":-1,\"object\":null},\"_data\":{\"name\":[[\"WebActivityState\",\"enablewebrolebasedkit\"]],\"value\":[[2,true]]},\"_attr_names\":[]}}}"
+[2022-02-07 06:27:19.477] [TRACE] PendingRequest - setting timeout for pending-request 6
+[2022-02-07 06:27:19.477] [DEBUG] BrowserManager - onBrowserCreated: launch requests queue is empty
+[2022-02-07 06:27:19.477] [DEBUG] BrowserManager - browser created but no launch request for type is registered
+[2022-02-07 06:27:19.477] [DEBUG] PackagesManager.ChannelManager - handle: responding to request from:  browser_6
+[2022-02-07 06:27:19.477] [DEBUG] PackagesManager.ChannelManager - handle: adoptedResponse - {
+    "format": "WebMessageFormat",
+    "data": {
+        "status": 0,
+        "data": null
+    }
+}
+[2022-02-07 06:27:19.480] [DEBUG] ChannelHelper - message received channel: 6, msg: {
+    "type": "response",
+    "uid": 6,
+    "data": {
+        "data": {
+            "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+            "_to": {
+                "browser": 2,
+                "page": -1,
+                "frame": -1,
+                "object": null
+            },
+            "_data": {
+                "name": [
+                    [
+                        "WebActivityState",
+                        "enablewebrolebasedkit"
+                    ]
+                ],
+                "value": [
+                    [
+                        2,
+                        true
+                    ]
+                ]
+            },
+            "_attr_names": [],
+            "status": "OK"
+        },
+        "format": "WebMessageFormat"
+    },
+    "handlerType": "Query"
+}
+[2022-02-07 06:27:19.480] [TRACE] PendingRequest - responding to pending-request 6 - {
+    "data": {
+        "_msgType": "SRVC_SET_GLOBAL_VARIABLES",
+        "_to": {
+            "browser": 2,
+            "page": -1,
+            "frame": -1,
+            "object": null
+        },
+        "_data": {
+            "name": [
+                [
+                    "WebActivityState",
+                    "enablewebrolebasedkit"
+                ]
+            ],
+            "value": [
+                [
+                    2,
+                    true
+                ]
+            ]
+        },
+        "_attr_names": [],
+        "status": "OK"
+    },
+    "format": "WebMessageFormat"
+}
+[2022-02-07 06:27:19.480] [INFO] PendingRequest - cleared timeout for pending-request 6

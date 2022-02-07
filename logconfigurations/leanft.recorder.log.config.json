@@ -1,0 +1,12 @@
+{
+  "levels": {
+    "[all]": "trace"
+  },
+  "appenders": [{
+    "type": "file",
+    "absolute": true,
+    "filename": "<LEANFT_LOG_FOLDER>/leanft.recorder.log",
+    "maxLogSize": 5242880,
+    "backups": 5
+  }]
+}
